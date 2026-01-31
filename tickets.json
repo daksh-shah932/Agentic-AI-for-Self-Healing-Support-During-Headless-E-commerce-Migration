@@ -1,0 +1,11 @@
+[
+  { "ticket_id": 1, "merchant_id": 101, "message": "My API key is invalid when trying to authenticate the SDK." },
+  { "ticket_id": 2, "merchant_id": 102, "message": "Where can I find the documentation for the 'create_cart' mutation?" },
+  { "ticket_id": 3, "merchant_id": 103, "message": "Checkout is throwing a 500 error in production." },
+  { "ticket_id": 4, "merchant_id": 104, "message": "Authentication failed: Invalid token format in header." },
+  { "ticket_id": 5, "merchant_id": 105, "message": "The documentation link for webhooks is broken." },
+  { "ticket_id": 6, "merchant_id": 106, "message": "Customers cannot complete payment, server returns internal error." },
+  { "ticket_id": 7, "merchant_id": 107, "message": "I get a 401 Unauthorized when setting up the client." },
+  { "ticket_id": 8, "merchant_id": 108, "message": "Is there an example JSON payload for the inventory update endpoint?" },
+  { "ticket_id": 9, "merchant_id": 109, "message": "Critical: Payment gateway timeout during peak traffic." }
+]
