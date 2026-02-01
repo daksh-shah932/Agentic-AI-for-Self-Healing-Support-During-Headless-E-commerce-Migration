@@ -238,5 +238,15 @@
     "ticket_id": 48,
     "merchant_id": 1,
     "message": "loading internet high"
+  },
+  {
+    "ticket_id": 49,
+    "merchant_id": 131,
+    "message": "error with network"
+  },
+  {
+    "ticket_id": 50,
+    "merchant_id": 142,
+    "message": "Checkout not working"
   }
 ]

@@ -102,7 +102,8 @@
       41,
       42,
       43,
-      44
+      44,
+      50
     ],
     "merchants": [
       1031,
@@ -113,6 +114,7 @@
       1037,
       1038,
       1039,
+      142,
       1061,
       1062,
       1063,
@@ -134,7 +136,7 @@
       110
     ],
     "timeline": {
-      "Observe": "Clustered 28 tickets via DBSCAN.",
+      "Observe": "Clustered 29 tickets via DBSCAN.",
       "Reason": "Keywords '500 error' and 'production' indicate a server-side failure affecting live traffic.",
       "Decide": "ESCALATE to Engineering immediately.",
       "Act": "Repro Pack Generated"
@@ -144,12 +146,12 @@
       "reason": "Risk is Critical, but human approval is required."
     },
     "repro_pack": {
-      "id": "INC-C2F5752C",
+      "id": "INC-97F36C64",
       "type": "full",
       "triggers": [
         "High confidence platform regression",
         "Production environment (Stage 3)",
-        "Significant cluster size (28 tickets)",
+        "Significant cluster size (29 tickets)",
         "Multiple merchants affected"
       ]
     }
@@ -298,6 +300,31 @@
     ],
     "timeline": {
       "Observe": "Clustered 4 tickets via DBSCAN.",
+      "Reason": "The user is struggling with initial API key validation, which is typical during setup.",
+      "Decide": "Send standard configuration guide.",
+      "Act": "internal_ticket_created"
+    },
+    "restraint": {
+      "action_not_taken": "Auto-Email Blast to Merchants",
+      "reason": "Confidence (0.65) is below 0.8 threshold."
+    },
+    "repro_pack": null
+  },
+  {
+    "id": "CL-9",
+    "title": "Cluster 9: Merchant Configuration Error",
+    "stage": "Stage 1: Setup & Auth",
+    "root_cause": "Merchant Configuration Error",
+    "confidence": 0.65,
+    "risk": "Low",
+    "ticket_ids": [
+      49
+    ],
+    "merchants": [
+      131
+    ],
+    "timeline": {
+      "Observe": "Clustered 1 tickets via DBSCAN.",
       "Reason": "The user is struggling with initial API key validation, which is typical during setup.",
       "Decide": "Send standard configuration guide.",
       "Act": "internal_ticket_created"

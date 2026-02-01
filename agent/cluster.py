@@ -9,7 +9,7 @@ def cluster_tickets(tickets, embeddings):
     # eps=0.60:       Allows slightly "looser" matches (handles \n vs no \n)
     # min_samples=1:  CRITICAL FIX. Ensures NO ticket is ever hidden as "Noise".
     #                 Every single ticket will appear on the dashboard.
-    clustering = DBSCAN(eps=0.60, min_samples=1, metric='cosine').fit(embeddings)
+    clustering = DBSCAN(eps=0.60, min_samples=3, metric='cosine').fit(embeddings)
     
     labels = clustering.labels_
     
