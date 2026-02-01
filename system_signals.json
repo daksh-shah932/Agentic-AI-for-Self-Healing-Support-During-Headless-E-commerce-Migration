@@ -1,0 +1,7 @@
+{
+  "checkout_error_rate_history": [4, 7, 12, 18, 29, 38],
+  "api_error_rate_history": [3, 6, 11, 19, 31],
+  "latency_ms_history": [120, 180, 260, 420, 780],
+  "webhook_failure_rate_history": [5, 9, 14, 21],
+  "order_success_rate_history": [98, 96, 92, 85, 71]
+}

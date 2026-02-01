@@ -1,0 +1,63 @@
+{
+  "incident_id": "INC-2DC67A8C",
+  "repro_type": "full",
+  "repro_trigger_reason": [
+    "High confidence platform regression",
+    "Production environment (Stage 3)",
+    "Significant cluster size (14 tickets)",
+    "Multiple merchants affected"
+  ],
+  "suspected_stage": "Stage 3: Live / Scale",
+  "suspected_root_cause": "Platform Issue / Regression",
+  "confidence": 0.92,
+  "affected_merchants": [
+    1088,
+    1091,
+    1061,
+    1093,
+    1032,
+    1033,
+    1066,
+    1068,
+    1037,
+    1038,
+    1039,
+    1069,
+    110,
+    1087
+  ],
+  "affected_endpoints": [
+    "POST /api/v1/checkout"
+  ],
+  "sample_error_messages": [
+    "Receiving 400 errors during checkout flow.",
+    "Checkout is returning 500 errors in production.",
+    "Random errors but cannot reproduce.",
+    "Production checkout timeout after recent release.",
+    "Seeing occasional errors but system recovers.",
+    "Checkout is failing with 500 error",
+    "Spike in 5xx errors since morning."
+  ],
+  "repro_steps": [
+    "1. Authenticate as one of the affected merchants (e.g., 1088).",
+    "2. Construct a standard payload for POST /api/v1/checkout.",
+    "3. Send request and monitor for HTTP 500 or Timeout > 5000ms.",
+    "4. Correlate request ID with system logs."
+  ],
+  "sample_payload": {
+    "items": [
+      {
+        "id": "sku_123",
+        "qty": 1
+      }
+    ],
+    "currency": "USD",
+    "context": "generated_by_agent"
+  },
+  "system_context": {
+    "signal_name": "N/A",
+    "current_value": "N/A",
+    "trend": "High/Critical"
+  },
+  "generated_at": "2026-02-01T11:33:38.420475"
+}

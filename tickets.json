@@ -1,11 +1,252 @@
 [
-  { "ticket_id": 1, "merchant_id": 101, "message": "My API key is invalid when trying to authenticate the SDK." },
-  { "ticket_id": 2, "merchant_id": 102, "message": "Where can I find the documentation for the 'create_cart' mutation?" },
-  { "ticket_id": 3, "merchant_id": 103, "message": "Checkout is throwing a 500 error in production." },
-  { "ticket_id": 4, "merchant_id": 104, "message": "Authentication failed: Invalid token format in header." },
-  { "ticket_id": 5, "merchant_id": 105, "message": "The documentation link for webhooks is broken." },
-  { "ticket_id": 6, "merchant_id": 106, "message": "Customers cannot complete payment, server returns internal error." },
-  { "ticket_id": 7, "merchant_id": 107, "message": "I get a 401 Unauthorized when setting up the client." },
-  { "ticket_id": 8, "merchant_id": 108, "message": "Is there an example JSON payload for the inventory update endpoint?" },
-  { "ticket_id": 9, "merchant_id": 109, "message": "Critical: Payment gateway timeout during peak traffic." }
+  {
+    "ticket_id": 1,
+    "merchant_id": 1001,
+    "message": "My API key is invalid during SDK initialization."
+  },
+  {
+    "ticket_id": 2,
+    "merchant_id": 1002,
+    "message": "Authentication failed with invalid token error."
+  },
+  {
+    "ticket_id": 3,
+    "merchant_id": 1003,
+    "message": "Where do I generate client credentials?"
+  },
+  {
+    "ticket_id": 4,
+    "merchant_id": 1004,
+    "message": "401 unauthorized when calling catalog API."
+  },
+  {
+    "ticket_id": 5,
+    "merchant_id": 1005,
+    "message": "Unable to authenticate after headless setup."
+  },
+  {
+    "ticket_id": 6,
+    "merchant_id": 1006,
+    "message": "Token format seems wrong in Authorization header."
+  },
+  {
+    "ticket_id": 7,
+    "merchant_id": 1007,
+    "message": "SDK auth keeps failing in local environment."
+  },
+  {
+    "ticket_id": 8,
+    "merchant_id": 1008,
+    "message": "How do I rotate API keys?"
+  },
+  {
+    "ticket_id": 9,
+    "merchant_id": 1009,
+    "message": "Getting forbidden error during initial setup."
+  },
+  {
+    "ticket_id": 10,
+    "merchant_id": 1010,
+    "message": "Setup guide not clear about auth headers."
+  },
+  {
+    "ticket_id": 31,
+    "merchant_id": 1031,
+    "message": "Checkout fails after calling createOrder mutation."
+  },
+  {
+    "ticket_id": 32,
+    "merchant_id": 1032,
+    "message": "Webhook payload schema example missing."
+  },
+  {
+    "ticket_id": 33,
+    "merchant_id": 1033,
+    "message": "Payment webhook not firing in integration env."
+  },
+  {
+    "ticket_id": 34,
+    "merchant_id": 1034,
+    "message": "Order creation works in staging but not prod-like env."
+  },
+  {
+    "ticket_id": 35,
+    "merchant_id": 1035,
+    "message": "Cart API returns validation error."
+  },
+  {
+    "ticket_id": 36,
+    "merchant_id": 1036,
+    "message": "Do you have a sample JSON for inventory update?"
+  },
+  {
+    "ticket_id": 37,
+    "merchant_id": 1037,
+    "message": "Integration broke after adding payment gateway."
+  },
+  {
+    "ticket_id": 38,
+    "merchant_id": 1038,
+    "message": "Receiving 400 errors during checkout flow."
+  },
+  {
+    "ticket_id": 39,
+    "merchant_id": 1039,
+    "message": "Webhook retries happening too often."
+  },
+  {
+    "ticket_id": 40,
+    "merchant_id": 1040,
+    "message": "Mismatch between docs and actual API response."
+  },
+  {
+    "ticket_id": 61,
+    "merchant_id": 1061,
+    "message": "Checkout is returning 500 errors in production."
+  },
+  {
+    "ticket_id": 62,
+    "merchant_id": 1062,
+    "message": "Customers cannot complete payment during peak traffic."
+  },
+  {
+    "ticket_id": 63,
+    "merchant_id": 1063,
+    "message": "Critical outage: live stores down."
+  },
+  {
+    "ticket_id": 64,
+    "merchant_id": 1064,
+    "message": "Internal server error across multiple merchants."
+  },
+  {
+    "ticket_id": 65,
+    "merchant_id": 1065,
+    "message": "Latency spikes causing cart abandonment."
+  },
+  {
+    "ticket_id": 66,
+    "merchant_id": 1066,
+    "message": "Production checkout timeout after recent release."
+  },
+  {
+    "ticket_id": 67,
+    "merchant_id": 1067,
+    "message": "Orders failing intermittently in live environment."
+  },
+  {
+    "ticket_id": 68,
+    "merchant_id": 1068,
+    "message": "Payment gateway timing out globally."
+  },
+  {
+    "ticket_id": 69,
+    "merchant_id": 1069,
+    "message": "Spike in 5xx errors since morning."
+  },
+  {
+    "ticket_id": 70,
+    "merchant_id": 1070,
+    "message": "Revenue impact due to checkout failures."
+  },
+  {
+    "ticket_id": 86,
+    "merchant_id": 1086,
+    "message": "Is there a roadmap for new APIs?"
+  },
+  {
+    "ticket_id": 87,
+    "merchant_id": 1087,
+    "message": "Checkout feels slower today but not sure."
+  },
+  {
+    "ticket_id": 88,
+    "merchant_id": 1088,
+    "message": "Random errors but cannot reproduce."
+  },
+  {
+    "ticket_id": 89,
+    "merchant_id": 1089,
+    "message": "Question about pricing tiers."
+  },
+  {
+    "ticket_id": 90,
+    "merchant_id": 1090,
+    "message": "When is next maintenance window?"
+  },
+  {
+    "ticket_id": 91,
+    "merchant_id": 1091,
+    "message": "Is the webhook schema changing soon?"
+  },
+  {
+    "ticket_id": 92,
+    "merchant_id": 1092,
+    "message": "Inventory updates delayed sometimes."
+  },
+  {
+    "ticket_id": 93,
+    "merchant_id": 1093,
+    "message": "Seeing occasional errors but system recovers."
+  },
+  {
+    "ticket_id": 94,
+    "merchant_id": 1094,
+    "message": "Minor UI glitch in admin dashboard."
+  },
+  {
+    "ticket_id": 95,
+    "merchant_id": 1095,
+    "message": "General question about headless migration."
+  },
+  {
+    "ticket_id": 41,
+    "merchant_id": 110,
+    "message": "Checkout is failing with 500 error"
+  },
+  {
+    "ticket_id": 42,
+    "merchant_id": 100,
+    "message": "Checkout is failing with 500 error"
+  },
+  {
+    "ticket_id": 43,
+    "merchant_id": 110,
+    "message": "Checkout is failing with 500 error"
+  },
+  {
+    "ticket_id": 44,
+    "merchant_id": 44,
+    "message": "Checkout is failing with 500 error"
+  },
+  {
+    "ticket_id": 45,
+    "merchant_id": 44,
+    "message": "loading internet high\n"
+  },
+  {
+    "ticket_id": 46,
+    "merchant_id": 44,
+    "message": "loading internet high"
+  },
+  {
+    "ticket_id": 47,
+    "merchant_id": 44,
+    "message": "loading internet high"
+  },
+  {
+    "ticket_id": 48,
+    "merchant_id": 1,
+    "message": "loading internet high"
+  },
+  {
+    "ticket_id": 49,
+    "merchant_id": 131,
+    "message": "error with network"
+  },
+  {
+    "ticket_id": 50,
+    "merchant_id": 142,
+    "message": "Checkout not working"
+  }
 ]

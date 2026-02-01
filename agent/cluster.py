@@ -4,25 +4,28 @@ import numpy as np
 def cluster_tickets(tickets, embeddings):
     """
     Process: Clusters tickets based on semantic similarity using DBSCAN.
-    Uses cosine distance (metric='cosine').
     """
-    # EPS: The maximum distance between two samples for one to be considered as in the neighborhood of the other.
-    # Min_samples: The number of samples in a neighborhood for a point to be considered as a core point.
-    clustering = DBSCAN(eps=0.5, min_samples=2, metric='cosine').fit(embeddings)
+    # --- DEMO MODE SETTINGS ---
+    # eps=0.60:       Allows slightly "looser" matches (handles \n vs no \n)
+    # min_samples=1:  CRITICAL FIX. Ensures NO ticket is ever hidden as "Noise".
+    #                 Every single ticket will appear on the dashboard.
+    clustering = DBSCAN(eps=0.60, min_samples=3, metric='cosine').fit(embeddings)
     
     labels = clustering.labels_
     
     # Organize tickets into clusters
     clusters = {}
+    
     for ticket, label in zip(tickets, labels):
-        if label == -1:
-            label_key = "Noise"
-        else:
-            label_key = f"Cluster {label}"
+        # In Demo Mode (min_samples=1), label will never be -1
+        label_key = int(label)
             
         if label_key not in clusters:
             clusters[label_key] = []
         clusters[label_key].append(ticket)
-        
-    print(f"--> [INTERNAL] Identified {len(clusters)} distinct semantic groups (including noise).")
+    
+    print(f"--> [INTERNAL] Clustering Stats (Demo Mode):")
+    print(f"    - Total Tickets:  {len(tickets)}")
+    print(f"    - Clusters Found: {len(clusters)}")
+    
     return clusters

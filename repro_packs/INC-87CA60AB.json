@@ -1,0 +1,42 @@
+{
+  "incident_id": "INC-87CA60AB",
+  "repro_type": "preliminary",
+  "repro_trigger_reason": [
+    "High confidence platform regression",
+    "Production environment (Stage 3)",
+    "Multiple merchants affected"
+  ],
+  "suspected_stage": "Stage 3: Live / Scale",
+  "suspected_root_cause": "Platform Issue / Regression",
+  "confidence": 0.92,
+  "affected_merchants": [
+    1067,
+    1063
+  ],
+  "affected_endpoints": [
+    "GET /api/status (Fallback)"
+  ],
+  "sample_error_messages": [],
+  "repro_steps": [
+    "NOTE: EARLY SIGNAL (Low Volume). Steps are heuristic.",
+    "1. Check logs for merchants: [1067, 1063].",
+    "2. Monitor GET /api/status (Fallback) for latency spikes.",
+    "3. Attempt manual reproduction using sample payload."
+  ],
+  "sample_payload": {
+    "items": [
+      {
+        "id": "sku_123",
+        "qty": 1
+      }
+    ],
+    "currency": "USD",
+    "context": "generated_by_agent"
+  },
+  "system_context": {
+    "signal_name": "N/A",
+    "current_value": "N/A",
+    "trend": "High/Critical"
+  },
+  "generated_at": "2026-02-01T01:36:41.278210"
+}

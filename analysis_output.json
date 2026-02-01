@@ -1,0 +1,338 @@
+[
+  {
+    "id": "CL-0",
+    "title": "Cluster 0: Merchant Configuration Error",
+    "stage": "Stage 1: Setup & Auth",
+    "root_cause": "Merchant Configuration Error",
+    "confidence": 0.65,
+    "risk": "Low",
+    "ticket_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      35
+    ],
+    "merchants": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1035,
+      1010
+    ],
+    "timeline": {
+      "Observe": "Clustered 10 tickets via DBSCAN.",
+      "Reason": "The user is struggling with initial API key validation, which is typical during setup.",
+      "Decide": "Send standard configuration guide.",
+      "Act": "internal_ticket_created"
+    },
+    "restraint": {
+      "action_not_taken": "Auto-Email Blast to Merchants",
+      "reason": "Confidence (0.65) is below 0.8 threshold."
+    },
+    "repro_pack": null
+  },
+  {
+    "id": "CL-1",
+    "title": "Cluster 1: Merchant Configuration Error",
+    "stage": "Stage 1: Setup & Auth",
+    "root_cause": "Merchant Configuration Error",
+    "confidence": 0.65,
+    "risk": "Low",
+    "ticket_ids": [
+      9
+    ],
+    "merchants": [
+      1009
+    ],
+    "timeline": {
+      "Observe": "Clustered 1 tickets via DBSCAN.",
+      "Reason": "The user is struggling with initial API key validation, which is typical during setup.",
+      "Decide": "Send standard configuration guide.",
+      "Act": "internal_ticket_created"
+    },
+    "restraint": {
+      "action_not_taken": "Auto-Email Blast to Merchants",
+      "reason": "Confidence (0.65) is below 0.8 threshold."
+    },
+    "repro_pack": null
+  },
+  {
+    "id": "CL-2",
+    "title": "Cluster 2: Platform Issue / Regression",
+    "stage": "Stage 3: Live / Scale",
+    "root_cause": "Platform Issue / Regression",
+    "confidence": 0.92,
+    "risk": "High",
+    "ticket_ids": [
+      31,
+      32,
+      33,
+      34,
+      36,
+      37,
+      38,
+      39,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      86,
+      87,
+      88,
+      91,
+      92,
+      93,
+      41,
+      42,
+      43,
+      44,
+      50
+    ],
+    "merchants": [
+      1031,
+      1032,
+      1033,
+      1034,
+      1036,
+      1037,
+      1038,
+      1039,
+      142,
+      1061,
+      1062,
+      1063,
+      1064,
+      1065,
+      1066,
+      1067,
+      1068,
+      1069,
+      1070,
+      44,
+      1086,
+      1087,
+      1088,
+      1091,
+      1092,
+      1093,
+      100,
+      110
+    ],
+    "timeline": {
+      "Observe": "Clustered 29 tickets via DBSCAN.",
+      "Reason": "Keywords '500 error' and 'production' indicate a server-side failure affecting live traffic.",
+      "Decide": "ESCALATE to Engineering immediately.",
+      "Act": "Repro Pack Generated"
+    },
+    "restraint": {
+      "action_not_taken": "Auto-Rollback of API Deployment",
+      "reason": "Risk is Critical, but human approval is required."
+    },
+    "repro_pack": {
+      "id": "INC-97F36C64",
+      "type": "full",
+      "triggers": [
+        "High confidence platform regression",
+        "Production environment (Stage 3)",
+        "Significant cluster size (29 tickets)",
+        "Multiple merchants affected"
+      ]
+    }
+  },
+  {
+    "id": "CL-3",
+    "title": "Cluster 3: Documentation Gap",
+    "stage": "Stage 2: Integration",
+    "root_cause": "Documentation Gap",
+    "confidence": 0.85,
+    "risk": "Medium",
+    "ticket_ids": [
+      40
+    ],
+    "merchants": [
+      1040
+    ],
+    "timeline": {
+      "Observe": "Clustered 1 tickets via DBSCAN.",
+      "Reason": "Users are requesting examples and schema definitions, implying missing information in developer guides.",
+      "Decide": "Create internal ticket to update docs + Notify merchant.",
+      "Act": "internal_ticket_created"
+    },
+    "restraint": {
+      "action_not_taken": "Escalation to VP Engineering",
+      "reason": "Issue severity does not meet SLA for executive wake-up."
+    },
+    "repro_pack": null
+  },
+  {
+    "id": "CL-4",
+    "title": "Cluster 4: Merchant Configuration Error",
+    "stage": "Stage 1: Setup & Auth",
+    "root_cause": "Merchant Configuration Error",
+    "confidence": 0.65,
+    "risk": "Low",
+    "ticket_ids": [
+      89
+    ],
+    "merchants": [
+      1089
+    ],
+    "timeline": {
+      "Observe": "Clustered 1 tickets via DBSCAN.",
+      "Reason": "The user is struggling with initial API key validation, which is typical during setup.",
+      "Decide": "Send standard configuration guide.",
+      "Act": "internal_ticket_created"
+    },
+    "restraint": {
+      "action_not_taken": "Auto-Email Blast to Merchants",
+      "reason": "Confidence (0.65) is below 0.8 threshold."
+    },
+    "repro_pack": null
+  },
+  {
+    "id": "CL-5",
+    "title": "Cluster 5: Merchant Configuration Error",
+    "stage": "Stage 1: Setup & Auth",
+    "root_cause": "Merchant Configuration Error",
+    "confidence": 0.65,
+    "risk": "Low",
+    "ticket_ids": [
+      90
+    ],
+    "merchants": [
+      1090
+    ],
+    "timeline": {
+      "Observe": "Clustered 1 tickets via DBSCAN.",
+      "Reason": "The user is struggling with initial API key validation, which is typical during setup.",
+      "Decide": "Send standard configuration guide.",
+      "Act": "internal_ticket_created"
+    },
+    "restraint": {
+      "action_not_taken": "Auto-Email Blast to Merchants",
+      "reason": "Confidence (0.65) is below 0.8 threshold."
+    },
+    "repro_pack": null
+  },
+  {
+    "id": "CL-6",
+    "title": "Cluster 6: Merchant Configuration Error",
+    "stage": "Stage 1: Setup & Auth",
+    "root_cause": "Merchant Configuration Error",
+    "confidence": 0.65,
+    "risk": "Low",
+    "ticket_ids": [
+      94
+    ],
+    "merchants": [
+      1094
+    ],
+    "timeline": {
+      "Observe": "Clustered 1 tickets via DBSCAN.",
+      "Reason": "The user is struggling with initial API key validation, which is typical during setup.",
+      "Decide": "Send standard configuration guide.",
+      "Act": "internal_ticket_created"
+    },
+    "restraint": {
+      "action_not_taken": "Auto-Email Blast to Merchants",
+      "reason": "Confidence (0.65) is below 0.8 threshold."
+    },
+    "repro_pack": null
+  },
+  {
+    "id": "CL-7",
+    "title": "Cluster 7: Merchant Configuration Error",
+    "stage": "Stage 1: Setup & Auth",
+    "root_cause": "Merchant Configuration Error",
+    "confidence": 0.65,
+    "risk": "Low",
+    "ticket_ids": [
+      95
+    ],
+    "merchants": [
+      1095
+    ],
+    "timeline": {
+      "Observe": "Clustered 1 tickets via DBSCAN.",
+      "Reason": "The user is struggling with initial API key validation, which is typical during setup.",
+      "Decide": "Send standard configuration guide.",
+      "Act": "internal_ticket_created"
+    },
+    "restraint": {
+      "action_not_taken": "Auto-Email Blast to Merchants",
+      "reason": "Confidence (0.65) is below 0.8 threshold."
+    },
+    "repro_pack": null
+  },
+  {
+    "id": "CL-8",
+    "title": "Cluster 8: Merchant Configuration Error",
+    "stage": "Stage 1: Setup & Auth",
+    "root_cause": "Merchant Configuration Error",
+    "confidence": 0.65,
+    "risk": "Low",
+    "ticket_ids": [
+      45,
+      46,
+      47,
+      48
+    ],
+    "merchants": [
+      1,
+      44
+    ],
+    "timeline": {
+      "Observe": "Clustered 4 tickets via DBSCAN.",
+      "Reason": "The user is struggling with initial API key validation, which is typical during setup.",
+      "Decide": "Send standard configuration guide.",
+      "Act": "internal_ticket_created"
+    },
+    "restraint": {
+      "action_not_taken": "Auto-Email Blast to Merchants",
+      "reason": "Confidence (0.65) is below 0.8 threshold."
+    },
+    "repro_pack": null
+  },
+  {
+    "id": "CL-9",
+    "title": "Cluster 9: Merchant Configuration Error",
+    "stage": "Stage 1: Setup & Auth",
+    "root_cause": "Merchant Configuration Error",
+    "confidence": 0.65,
+    "risk": "Low",
+    "ticket_ids": [
+      49
+    ],
+    "merchants": [
+      131
+    ],
+    "timeline": {
+      "Observe": "Clustered 1 tickets via DBSCAN.",
+      "Reason": "The user is struggling with initial API key validation, which is typical during setup.",
+      "Decide": "Send standard configuration guide.",
+      "Act": "internal_ticket_created"
+    },
+    "restraint": {
+      "action_not_taken": "Auto-Email Blast to Merchants",
+      "reason": "Confidence (0.65) is below 0.8 threshold."
+    },
+    "repro_pack": null
+  }
+]

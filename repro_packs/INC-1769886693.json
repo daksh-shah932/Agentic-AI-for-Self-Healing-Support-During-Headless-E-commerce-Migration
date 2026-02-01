@@ -1,0 +1,36 @@
+{
+  "incident_id": "INC-1769886693",
+  "suspected_stage": "Stage 3: Live / Scale",
+  "suspected_root_cause": "Platform Issue / Regression",
+  "confidence": 0.92,
+  "affected_merchants": [
+    1067,
+    1063
+  ],
+  "affected_endpoints": [
+    "GET /api/status (Fallback)"
+  ],
+  "sample_error_messages": [],
+  "repro_steps": [
+    "1. Authenticate as one of the affected merchants (e.g., 1067).",
+    "2. Construct a standard payload for GET /api/status (Fallback).",
+    "3. Send request and monitor for HTTP 500 or Timeout > 5000ms.",
+    "4. Correlate request ID with system logs."
+  ],
+  "sample_payload": {
+    "items": [
+      {
+        "id": "sku_123",
+        "qty": 1
+      }
+    ],
+    "currency": "USD",
+    "context": "generated_by_agent"
+  },
+  "system_context": {
+    "signal_name": "N/A",
+    "current_value": "N/A",
+    "trend": "High/Critical"
+  },
+  "generated_at": "2026-02-01T00:41:33.278440"
+}
